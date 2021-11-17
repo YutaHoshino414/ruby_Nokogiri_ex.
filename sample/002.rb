@@ -1,12 +1,9 @@
 require 'open-uri'
 require 'nokogiri'
 
-url = "@@@@@"
+url = "https://www.fujicitio.com/tenpo/shop_74.html"
 res = URI.open(url)
-doc = Nokogiri::HTML.parse(res)
+charset = res.charset
+doc = Nokogiri::HTML.parse(res, charset)
 
-doc.xpath('¥¥¥¥¥¥¥').each.with_index do |li, i|
-    
-    puts '----'
-    
-end
+puts doc
