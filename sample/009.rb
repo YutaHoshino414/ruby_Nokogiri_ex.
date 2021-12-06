@@ -10,7 +10,13 @@ class Crawler
     end
 
     def main
-        @driver.get('@@@@')
+        @driver.get('https://www.curves.co.jp/search/')
+        target_list = @driver.find_elements(:xpath, '//map/area')
+        target_list.each do | target |
+            url = target.attribute('href')
+            p url
+            
+        end
         
     end
 

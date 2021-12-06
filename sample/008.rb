@@ -20,7 +20,7 @@ class Crawler
             sleep 1
             tenpo_list.append([name])
         end
-        
+
         p tenpo_list
         @datas = tenpo_list
     end
@@ -39,6 +39,7 @@ class Crawler
         output_csv
     end
 end
+
 
 crawler = Crawler.new
 crawler.run
