@@ -2,10 +2,8 @@ require "kimurai"
 
 class TestSpider < Kimurai::Base
     @name = "kimurai_spider"
-    # スクレイピングに使用するドライバ
-    @engine = :selenium_chrome
-    # 最初に訪れるURL。配列で複数設定することも可能。
-    @start_urls = ["https://cyclemarket.jp"]
+    @engine = :selenium_chrome  # スクレイピングに使用するドライバ
+    @start_urls = ["https://cyclemarket.jp"] # 最初に訪れるURL。配列で複数設定することも可能。
     @config = {
         # ユーザーエージェント
         user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36",
@@ -33,8 +31,8 @@ class TestSpider < Kimurai::Base
             row = {}
             row[:name] = product_name(product.css(".body .title").text.strip)
             row[:category_name] = data[:category_name]
-            row[:min_price] = product.css(".min-price").text.strip.delete("^0-9")
-            row[:max_price] = product.css(".max-price").text.strip.delete("^0-9")
+            row[:price_non_tax] = product.css(".price__nonTax").text.strip.delete("^0-9")
+            row[:price_in_tax] = product.css(".price__inTax").text.strip.delete("^0-9")
     
             # CSVファイルに出力する
             save_to "results.csv", row, format: :csv
