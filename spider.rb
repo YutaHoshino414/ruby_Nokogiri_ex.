@@ -36,7 +36,7 @@ class TestSpider < Kimurai::Base
     
             # CSVファイルに出力する
             # save_to "results.csv", row, format: :csv
-            save_to "./data/results.json", row, format: :json
+            save_to "./data/results.json", row, format: :pretty_json
         end
     end
 
