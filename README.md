@@ -1,5 +1,14 @@
 ## 🕸 Kimurai (scraping framework for Ruby)  
 Ruby版Scrapy(python)を試すリポ
+
+### Test
+|- README.md  
+:  
+|-spider.rb
+```
+$ ruby spider.rb
+```
+
 ### Reference :
 > https://github.com/vifreefly/kimuraframework  
 https://qiita.com/hibiheion/items/502b1a4091d54d05fb53

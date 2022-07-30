@@ -35,7 +35,8 @@ class TestSpider < Kimurai::Base
             row[:price_in_tax] = product.css(".price__inTax").text.strip.delete("^0-9")
     
             # CSVファイルに出力する
-            save_to "results.csv", row, format: :csv
+            # save_to "results.csv", row, format: :csv
+            save_to "./data/results.json", row, format: :json
         end
     end
 
