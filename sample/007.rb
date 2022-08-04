@@ -27,7 +27,8 @@ class Crawler
     end
 
     def output_csv
-        CSV.open("list_#{File.basename(__FILE__).gsub(/.rb/,'')}.csv", "w") do |f|
+        filename = File.basename(__FILE__).gsub(/.rb/,'')
+        CSV.open("list_#{filename}.csv", "w") do |f|
             f << ['name','url']
             @datas.each do |tenpo|
                 f << tenpo
