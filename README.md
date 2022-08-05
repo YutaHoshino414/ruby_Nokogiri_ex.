@@ -4,9 +4,13 @@ Ruby版Scrapy(python)を試すリポ
 [公式](https://github.com/vifreefly/kimuraframework )
 
 ### Test
+:   
+|- nokogiri (通常のnokogiriを試す)  
+|- selenium (通常のseleniumを試す)  
+|- spider (kimuraiを試す)   
 |- README.md  
 :  
-|-spider.rb
+|-spider.rb (spider sample file)
 ```
 $ ruby spider.rb
 ```
