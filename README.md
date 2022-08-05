@@ -7,9 +7,11 @@ Ruby版Scrapy(python)を試すリポ
 :   
 |- nokogiri (通常のnokogiriを試す)  
 |- selenium (通常のseleniumを試す)  
+|  
 |- spider (kimuraiを試す)   
+:　　|- 並列処理でも試してみる  
+:    
 |- README.md  
-:  
 |-spider.rb (spider sample file)
 ```
 $ ruby spider.rb
